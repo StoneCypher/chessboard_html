@@ -1,0 +1,31 @@
+
+.board            { position: relative; font-size: 300%; }
+
+.boardbg          { border-collapse: collapse; }
+.boardbg td       { height: 2em; width: 2em; }
+.boardbg td.black { background-color: brown; }
+.boardbg td.white { background-color: yellow; }
+
+pawn, knight, bishop, rook, queen, king { width: 1em; height: 1em; font-size: 150%; padding-left: 0.13em; position: absolute; }
+[color=white] { color: white; }
+[color=black] { color: black; }
+
+pawn:before { content: '\2659'; }
+
+.rankA { left: 0; }
+.rankB { left: 2em; }
+.rankC { left: 4em; }
+.rankD {}
+.rankE {}
+.rankF {}
+.rankG {}
+.rankH {}
+
+.file1 {}
+.file2 {}
+.file3 {}
+.file4 {}
+.file5 {}
+.file6 {}
+.file7 {}
+.file8 {}
