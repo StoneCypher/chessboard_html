@@ -5,6 +5,25 @@
 
     <link rel="stylesheet" type="text/css" href="chessboard.css">
 
+    <script type="text/javascript">
+     
+      function byId(X) { return document.getElementById(X); }
+
+      function move() {
+        var tid = byId('pm').value;  // target id
+        var tnr = byId('pr').value;  // target new rank
+        var tnf = byId('pf').value;  // target new file
+        if (tid && tnr && tnf) {
+            var tgt = document.getElementById(tid.toLowerCase());
+            tgt.setAttribute('rank', tnr.toUpperCase());
+            tgt.setAttribute('file', parseInt(tnf,10));
+        } else {
+            window.alert('fill out the fields plskthx');
+        }
+      }
+
+    </script>
+
   </head>
 
   <body>
@@ -50,18 +69,21 @@
         <queen id="wq2" color="white" rank="D" file="8"></queen>
         <king  id="wk2" color="white" rank="E" file="8"></king>
 
-    	<table class="boardbg">
-    		<tr><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td></tr>
-    		<tr><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td></tr>
-    		<tr><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td></tr>
-    		<tr><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td></tr>
-    		<tr><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td></tr>
-    		<tr><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td></tr>
-    		<tr><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td></tr>
-    		<tr><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td><td class="black"></td><td class="white"></td></tr>
-    	</table>
+        <board>
+            <bfile><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq></bfile>
+            <bfile><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq></bfile>
+            <bfile><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq></bfile>
+            <bfile><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq></bfile>
+            <bfile><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq></bfile>
+            <bfile><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq></bfile>
+            <bfile><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq></bfile>
+            <bfile><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq><sq></sq></bfile>
+        </board>
 
     </div>
+
+    Move <input id="pm" placeholder="wp4"/> to <input id="pr" placeholder="D"/><input id="pf" placeholder="5">
+    <button onclick="move();">!</button>
 
   </body>
 

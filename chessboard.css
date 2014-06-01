@@ -1,12 +1,25 @@
 
-.board            { position: relative; font-size: 300%; }
+.board            { position: relative; }
 
 .boardbg          { border-collapse: collapse; z-index: 2; }
 .boardbg td       { height: 1.2em; width: 1.2em; margin: 0; padding: 0; z-index: 3; }
-.boardbg td.black { background-color: brown; }
-.boardbg td.white { background-color: yellow; }
+.boardbg td.black { background-color: #d18b47; }
+.boardbg td.white { background-color: #ffce9e; }
 
-pawn, knight, bishop, rook, queen, king { width: 1em; height: 1em; padding-left: 0.1em; position: absolute; line-height: 125%; z-index: 4; }
+pawn, knight, bishop, rook, queen, king { 
+    width                      : 1em; 
+    height                     : 1em; 
+    padding-left               : 0.1em; 
+    position                   : absolute; 
+    line-height                : 125%; 
+    z-index                    : 4; 
+    transition-property        : left, top;
+    transition-duration        : 1s;
+    transition-timing-function : ease-in-out;
+    transition-delay           : 0;
+}
+
+
 [color=white] { color: white; }
 [color=black] { color: black; }
 
@@ -34,3 +47,12 @@ king:before   { content: '\265a'; }
 [file='6'] { top: 6em;   }
 [file='7'] { top: 7.2em; }
 [file='8'] { top: 8.4em; }
+
+board { display: table; }
+bfile { display: table-row; }
+sq    { display: table-cell; height: 1.2em; width: 1.2em; background-color: #ffce9e; }
+
+bfile:nth-child(even) sq:nth-child(odd), bfile:nth-child(odd) sq:nth-child(even) { background-color: #d18b47; }
+
+input    { width: 1em; text-align: center; }
+input#pm { width: 2em; }
