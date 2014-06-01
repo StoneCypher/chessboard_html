@@ -1,10 +1,5 @@
 
-.board            { position: relative; }
-
-.boardbg          { border-collapse: collapse; z-index: 2; }
-.boardbg td       { height: 1.2em; width: 1.2em; margin: 0; padding: 0; z-index: 3; }
-.boardbg td.black { background-color: #d18b47; }
-.boardbg td.white { background-color: #ffce9e; }
+.board { position: relative; font-size: 300%; }
 
 pawn, knight, bishop, rook, queen, king { 
     width                      : 1em; 
