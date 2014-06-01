@@ -2,30 +2,35 @@
 .board            { position: relative; font-size: 300%; }
 
 .boardbg          { border-collapse: collapse; }
-.boardbg td       { height: 2em; width: 2em; }
+.boardbg td       { height: 1.2em; width: 1.2em; margin: 0; padding: 0; }
 .boardbg td.black { background-color: brown; }
 .boardbg td.white { background-color: yellow; }
 
-pawn, knight, bishop, rook, queen, king { width: 1em; height: 1em; font-size: 150%; padding-left: 0.13em; position: absolute; }
+pawn, knight, bishop, rook, queen, king { width: 1em; height: 1em; padding-left: 0.13em; position: absolute; }
 [color=white] { color: white; }
 [color=black] { color: black; }
 
-pawn:before { content: '\2659'; }
+pawn:before   { content: '\265f'; }
+knight:before { content: '\265e'; }
+bishop:before { content: '\265f'; }
+rook:before   { content: '\265f'; }
+queen:before  { content: '\265f'; }
+king:before   { content: '\265f'; }
 
-.rankA { left: 0; }
-.rankB { left: 2em; }
-.rankC { left: 4em; }
-.rankD {}
-.rankE {}
-.rankF {}
-.rankG {}
-.rankH {}
+[rank=A] { left: 0;     }
+[rank=B] { left: 1.2em; }
+[rank=C] { left: 2.4em; }
+[rank=D] { left: 3.6em; }
+[rank=E] { left: 4.8em; }
+[rank=F] { left: 6em;   }
+[rank=G] { left: 7.2em; }
+[rank=H] { left: 8.4em; }
 
-.file1 {}
-.file2 {}
-.file3 {}
-.file4 {}
-.file5 {}
-.file6 {}
-.file7 {}
-.file8 {}
+[file='1'] { top: 0;     }
+[file='2'] { top: 1.2em; }
+[file='3'] { top: 2.4em; }
+[file='4'] { top: 3.6em; }
+[file='5'] { top: 4.8em; }
+[file='6'] { top: 6em;   }
+[file='7'] { top: 7.2em; }
+[file='8'] { top: 8.4em; }
