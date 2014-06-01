@@ -39,14 +39,14 @@ king:before   { content: '\265a'; }
 [rank=G] { left: 7.2em; }
 [rank=H] { left: 8.4em; }
 
-[file='1'] { top: 0;     }
-[file='2'] { top: 1.2em; }
-[file='3'] { top: 2.4em; }
-[file='4'] { top: 3.6em; }
-[file='5'] { top: 4.8em; }
-[file='6'] { top: 6em;   }
-[file='7'] { top: 7.2em; }
-[file='8'] { top: 8.4em; }
+[file='8'] { top: 0;     }
+[file='7'] { top: 1.2em; }
+[file='6'] { top: 2.4em; }
+[file='5'] { top: 3.6em; }
+[file='4'] { top: 4.8em; }
+[file='3'] { top: 6em;   }
+[file='2'] { top: 7.2em; }
+[file='1'] { top: 8.4em; }
 
 board { display: table; }
 bfile { display: table-row; }
