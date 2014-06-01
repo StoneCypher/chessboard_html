@@ -1,21 +1,21 @@
 
 .board            { position: relative; font-size: 300%; }
 
-.boardbg          { border-collapse: collapse; }
-.boardbg td       { height: 1.2em; width: 1.2em; margin: 0; padding: 0; }
+.boardbg          { border-collapse: collapse; z-index: 2; }
+.boardbg td       { height: 1.2em; width: 1.2em; margin: 0; padding: 0; z-index: 3; }
 .boardbg td.black { background-color: brown; }
 .boardbg td.white { background-color: yellow; }
 
-pawn, knight, bishop, rook, queen, king { width: 1em; height: 1em; padding-left: 0.13em; position: absolute; }
+pawn, knight, bishop, rook, queen, king { width: 1em; height: 1em; padding-left: 0.1em; position: absolute; line-height: 125%; z-index: 4; }
 [color=white] { color: white; }
 [color=black] { color: black; }
 
 pawn:before   { content: '\265f'; }
 knight:before { content: '\265e'; }
-bishop:before { content: '\265f'; }
-rook:before   { content: '\265f'; }
-queen:before  { content: '\265f'; }
-king:before   { content: '\265f'; }
+bishop:before { content: '\265d'; }
+rook:before   { content: '\265c'; }
+queen:before  { content: '\265b'; }
+king:before   { content: '\265a'; }
 
 [rank=A] { left: 0;     }
 [rank=B] { left: 1.2em; }
